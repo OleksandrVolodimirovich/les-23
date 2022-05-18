@@ -1,0 +1,49 @@
+:root{
+  --bg-body: #f9fbfa;
+  --bg-block: #eaeef1;
+  --bg-area: #ffffff;
+  --edit: #febd03;
+  --style: #0b97b8;
+  --add: #e8483c;
+  --save: #1f9642;
+  --alpha: #e94744;
+  --beta: #0078ff;
+  --delta: #1f9642;
+  --zeta: #323b40;
+  --eta: #febd00;
+  --iota: #f5538c;
+  --kappa: #ffffff;
+  --sigma: #704fc4;
+  --tau: #0b97bb;
+  --text: #252420;
+  --border: #ced0cf;
+}
+
+%roboto-400{
+  font-family: "Roboto-Regular", sans-serif;
+  font-weight: 400;
+}
+%roboto-700{
+  font-family: "Roboto-Bold", sans-serif;
+  font-weight: 700;
+}
+%DS-400{
+  font-family: "DancingScript", sans-serif;
+  font-weight: 400;
+}
+%LB-400{
+  font-family: "LibreBodoni", sans-serif;
+  font-weight: 400;
+}
+%Orbitron-400{
+  font-family: "Orbitron", sans-serif;
+  font-weight: 400;
+}
+%Oswald-400{
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+}
+%WS-400{
+  font-family: "WorkSans", sans-serif;
+  font-weight: 400;
+}

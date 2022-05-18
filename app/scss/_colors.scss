@@ -1,0 +1,82 @@
+.top__{
+  &color-wrapper{
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  &color-1{
+    background: #0ba99a;
+  }
+  &color-2{
+    background: #089082;
+  }
+  &color-3{
+    background: #1fb56b;
+  }
+  &color-4{
+    background: #1b9b5e;
+  }
+  &color-5{
+    background: #2791dd;
+  }
+  &color-6{
+    background: #207ab9;
+  }
+  &color-7{
+    background: #9b64b5;
+  }
+  &color-8{
+    background: #9051ac;
+  }
+  &color-9{
+    background: #32485f;
+  }
+  &color-10{
+    background: #283d50;
+  }
+  &color-11{
+    background: #f5bd06;
+  }
+  &color-12{
+    background: #f79b0a;
+  }
+  &color-13{
+    background: #ed821a;
+  }
+  &color-14{
+    background: #db5b00;
+  }
+  &color-15{
+    background: #f35a3a;
+  }
+  &color-16{
+    background: #c84626;
+  }
+  &color-17{
+    background: #eaeef1;
+  }
+  &color-18{
+    background: #bcc1c5;
+  }
+  &color-19{
+    background: #90a2a2;
+  }
+  &color-20{
+    background: #7c8a8b;
+  }
+  &color-21{
+    background: #000000;
+  }
+  &color-cub{
+    cursor: url(../images/cursor.png),pointer;
+    transition: all .3s;
+    &:hover{
+      transform: scale(0.9);
+    }
+  }
+}

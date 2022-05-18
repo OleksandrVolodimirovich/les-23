@@ -1,0 +1,68 @@
+@font-face{
+  font-family: "Roboto-Regular";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Roboto-Regular"),
+      url("../fonts/Roboto-Regular.woff2") format("woff2"),
+      url("../fonts/Roboto-Regular.woff") format("woff");
+  font-display: swap;
+}
+@font-face{
+  font-family: "Roboto-Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Roboto-Bold"),
+      url("../fonts/Roboto-Bold.woff2") format("woff2"),
+      url("../fonts/Roboto-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "DancingScript";
+  font-weight: 400;
+  font-style: normal;
+  src: local("DancingScript"),
+      url("../fonts/LibreBodoni.woff2") format("woff2"),
+      url("../fonts/LibreBodoni.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "LibreBodoni";
+  font-weight: 400;
+  font-style: normal;
+  src: local("LibreBodoni"),
+      url("../fonts/LibreBodoni.woff2") format("woff2"),
+      url("../fonts/LibreBodoni.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "Orbitron";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Orbitron"),
+      url("../fonts/Orbitron.woff2") format("woff2"),
+      url("../fonts/Orbitron.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "Oswald";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Oswald"),
+      url("../fonts/Oswald.woff2") format("woff2"),
+      url("../fonts/Oswald.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "WorkSans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("WorkSans"),
+      url("../fonts/WorkSans.woff2") format("woff2"),
+      url("../fonts/WorkSans.woff") format("woff");
+  font-display: swap;
+}

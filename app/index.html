@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <title>Editor 2.0</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="editor">
+          <div class="top block">
+            <div class="container">
+              <div class="top__inner">
+                <div class="top__color-wrapper">
+                  <div class="top__color">
+                    <div class="top__color-title">
+                      <p class="top__color-text">Choose text color</p>
+                      <p class="top__color-bg">Choose background color or image</p>
+                      <span class="modal-close">&#215;</span>
+                    </div>
+                    <ul class="top__color-list">
+                      <li class="top__color-item top__color--active">
+                        <span class="top__color-tab">Colors</span>
+                      </li>
+                      <li class="top__color-item">
+                        <span class="top__color-tab">Images</span>
+                      </li>
+                      <li class="top__color-item">
+                        <span class="top__color-tab">Files</span>
+                      </li>
+                    </ul>
+                    <div class="top__color-picker hide">
+                      <div class="top__color-cub top__color-1"></div>
+                      <div class="top__color-cub top__color-2"></div>
+                      <div class="top__color-cub top__color-3"></div>
+                      <div class="top__color-cub top__color-4"></div>
+                      <div class="top__color-cub top__color-5"></div>
+                      <div class="top__color-cub top__color-6"></div>
+                      <div class="top__color-cub top__color-7"></div>
+                      <div class="top__color-cub top__color-8"></div>
+                      <div class="top__color-cub top__color-9"></div>
+                      <div class="top__color-cub top__color-10"></div>
+                      <div class="top__color-cub top__color-11"></div>
+                      <div class="top__color-cub top__color-12"></div>
+                      <div class="top__color-cub top__color-13"></div>
+                      <div class="top__color-cub top__color-14"></div>
+                      <div class="top__color-cub top__color-15"></div>
+                      <div class="top__color-cub top__color-16"></div>
+                      <div class="top__color-cub top__color-17"></div>
+                      <div class="top__color-cub top__color-18"></div>
+                      <div class="top__color-cub top__color-19"></div>
+                      <div class="top__color-cub top__color-20"></div>
+                      <div class="top__color-cub top__color-21"></div>
+                    </div>
+                  </div>
+                </div>
+                <button class="top__code btn" type="button">
+                  <img src="./images/code.png" alt="">
+                </button>
+
+                <form class="top__text">
+                  <button class="top__style btn" type="button">
+                    <img src="./images/bold.png" alt="bold">
+                  </button>
+                  <button class="top__style btn" type="button">
+                    <img src="./images/italic.png" alt="italic">
+                  </button>
+                  <button class="top__style btn" type="button">
+                    <img src="./images/underline.png" alt="underline">
+                  </button>
+                  <button class="top__style btn" type="button">
+                    <img src="./images/strikethrough.png" alt="strikethrough">
+                  </button>
+                </form>
+                
+                <form class="top__text">
+                  <button class="top__align btn">
+                    <img src="./images/left-text.png" alt="left-text">
+                  </button>
+                  <button class="top__align btn">
+                    <img src="./images/center-text.png" alt="center-text">
+                  </button>
+                  <button class="top__align btn">
+                    <img src="./images/right-text.png" alt="right-text">
+                  </button>
+                </form>
+                
+                <form class="top__text">
+                  <button class="top__font btn">
+                    <img src="./images/font.png" alt="font">
+                    <div class="top__font-wrapper">
+                      <ul class="top__font-list">
+                        <li class="top__font-item">LibreBodoni</li>
+                        <li class="top__font-item">DancingScript</li>
+                        <li class="top__font-item">WorkSans</li>
+                        <li class="top__font-item">Orbitron</li>
+                        <li class="top__font-item">LibreBodoni</li>
+                        <li class="top__font-item">Oswald</li>
+                      </ul>
+                    </div>
+                  </button>
+                  
+                  <button class="top__font btn">
+                    <img src="./images/font-size.png" alt="font-size">
+                    <div class="top__size">
+                      <ul class="top__size-list">
+                        <li class="top__size-item">12px</li>
+                        <li class="top__size-item">14px</li>
+                        <li class="top__size-item">16px</li>
+                        <li class="top__size-item">18px</li>
+                        <li class="top__size-item">20px</li>
+                        <li class="top__size-item">22px</li>
+                        <li class="top__size-item">25px</li>
+                        <li class="top__size-item">30px</li>
+                      </ul>
+                    </div>
+                  </button>
+
+                  <button class="top__font btn">
+                    <img src="./images/palette.png" alt="palette">
+                  </button>
+
+                  <button class="top__font btn">
+                    <img src="./images/image.png" alt="image">
+                  </button>
+                </form>
+                
+                <button class="top__code btn" type="button">
+                  <img src="./images/padlock.png" alt="padlock">
+                </button>
+                
+              </div>
+            </div>
+          </div>
+          <div class="bottom block">
+            <div class="container">
+              <div class="bottom__inner">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel eligendi debitis fugiat nobis cupiditate eveniet.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel eligendi debitis fugiat nobis cupiditate eveniet.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel eligendi debitis fugiat nobis cupiditate eveniet.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel eligendi debitis fugiat nobis cupiditate eveniet.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel eligendi debitis fugiat nobis cupiditate eveniet.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel eligendi debitis fugiat nobis cupiditate eveniet.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel eligendi debitis fugiat nobis cupiditate eveniet.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel eligendi debitis fugiat nobis cupiditate eveniet.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    
+    <script src="js/main.min.js"></script>
+</body>
+</html>
