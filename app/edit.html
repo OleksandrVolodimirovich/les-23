@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <title>Editor 2.0</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="editor">
+          <div class="top block">
+            <div class="container">
+              <div class="top__inner">
+                <form class="top__text">
+                  <button class="top__save btn" type="button">
+                    <img src="./images/save.png" alt="save">
+                  </button>
+                  <button class="top__table btn" type="button">
+                    <img src="./images/table.png" alt="table">
+                  </button>
+                  <button class="top__ol btn" type="button">
+                    <img src="./images/list_ol.png" alt="underline">
+                  </button>
+                  <button class="top__ul btn" type="button">
+                    <img src="./images/list_ul.png" alt="strikethrough">
+                  </button>
+
+                  <div class="top__color-wrapper">
+                    <div class="top__color">
+                      <div class="top__color-title">
+                        <p class="top__table-title">Create table</p>
+                        <p class="top__table-title">Create Ol</p>
+                        <p class="top__table-title">Create Ul</p>
+                        <span class="modal-close">&#215;</span>
+                      </div>
+                      <ul class="top__table-list hide">
+                        <li class="top__table-col">
+                          <label class="top__table-label">
+                            <span class="top__table-span">Count TR:</span>
+                            <input class="top__table-input" type="number" placeholder="Type here..." required>
+                          </label>
+                          <label class="top__table-label">
+                            <span class="top__table-span">Width of TD:</span>
+                            <input class="top__table-input" type="number" placeholder="Type here..." required>
+                          </label>
+                          <label class="top__table-label">
+                            <span class="top__table-span">Width of border:</span>
+                            <input class="top__table-input" type="number" placeholder="Type here..." required>
+                          </label>
+                          
+                        </li>
+                        <li class="top__table-col">
+                          <label class="top__table-label">
+                            <span class="top__table-span">Count TD:</span>
+                            <input class="top__table-input" type="number" placeholder="Type here..." required>
+                          </label>
+                          <label class="top__table-label">
+                            <span class="top__table-span">Height of TD:</span>
+                            <input class="top__table-input" type="number" placeholder="Type here..." required>
+                          </label>
+                        
+                          <div class="top__table-selects">
+                            <div class="top__table-box">
+                              <span class="top__table-span">Style of border:</span>
+                              <select name="" id="" class="top__table-select" required>
+                                <option value="" class="top__table-option" disabled selected>Choose style</option>
+                                <option value="" class="top__table-option">dotted</option>
+                                <option value="" class="top__table-option">dashed</option>
+                                <option value="" class="top__table-option">solid</option>
+                                <option value="" class="top__table-option">double</option>
+                                <option value="" class="top__table-option">groove</option>
+                                <option value="" class="top__table-option">ridge</option>
+                                <option value="" class="top__table-option">inset</option>
+                                <option value="" class="top__table-option">outset</option>
+                            </select>
+                            </div>
+                            <div class="top__table-box">
+                              <span class="top__table-span">Color of border:</span>
+                              <select name="" id="" class="top__table-select" required>
+                                <option value="" class="top__table-option" disabled selected>Choose color</option>
+                                <option value="" class="top__table-option">black</option>
+                                <option value="" class="top__table-option">red</option>
+                                <option value="" class="top__table-option">green</option>
+                                <option value="" class="top__table-option">blue</option>
+                                <option value="" class="top__table-option">yellow</option>
+                                <option value="" class="top__table-option">white</option>
+                                <option value="" class="top__table-option">gray</option>
+                                <option value="" class="top__table-option">pink</option>
+                              </select>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+
+                      <ul class="top__ol">
+                        <label class="top__table-label">
+                          <span class="top__table-span">Count li item:</span>
+                          <input class="top__table-input" type="number" placeholder="Type here..." required>
+                        </label>
+                        <div class="top__table-box">
+                          <span class="top__table-span">Type mark of list:</span>
+                          <select name="" id="" class="top__table-select hide" required>
+                            <option class="top__table-option" disabled selected>Choose Ol type mark</option>
+                            <option value="" class="top__table-option">1</option>
+                            <option value="" class="top__table-option">I</option>
+                            <option value="" class="top__table-option">i</option>
+                            <option value="" class="top__table-option">A</option>
+                            <option value="" class="top__table-option">a</option>
+                          </select>
+                          <select name="" id="" class="top__table-select" required>
+                            <option class="top__table-option" disabled selected>Choose Ul type mark</option>
+                            <option value="" class="top__table-option">circle</option>
+                            <option value="" class="top__table-option">disc</option>
+                            <option value="" class="top__table-option">square</option>
+                          </select>
+                        </div>
+                      </ul>
+                      <div class="top__table-btns">
+                        <p class="top__table-required">Invalid value</p>
+                        <div class="top__table-btns-box">
+                          <button class="top__table-button red" type="reset">Reset</button>
+                          <button class="top__table-button green" type="submit">Create table</button>
+                        </div>
+                      </div>
+
+                      
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="bottom block">
+            <div class="container">
+              <textarea class="bottom__inner bottom__text">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel eligendi debitis fugiat nobis cupiditate eveniet.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel eligendi debitis fugiat nobis cupiditate eveniet.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel eligendi debitis fugiat nobis cupiditate eveniet.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel eligendi debitis fugiat nobis cupiditate eveniet.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel eligendi debitis fugiat nobis cupiditate eveniet.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel eligendi debitis fugiat nobis cupiditate eveniet.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel eligendi debitis fugiat nobis cupiditate eveniet.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel eligendi debitis fugiat nobis cupiditate eveniet.</p>
+              </textarea>
+
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    
+    <script src="js/main.min.js"></script>
+</body>
+</html>

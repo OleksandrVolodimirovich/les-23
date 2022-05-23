@@ -15,25 +15,26 @@
           <div class="top block">
             <div class="container">
               <div class="top__inner">
-                <div class="top__color-wrapper">
+                <div class="top__color-wrapper hide">
                   <div class="top__color">
                     <div class="top__color-title">
-                      <p class="top__color-text">Choose text color</p>
-                      <p class="top__color-bg">Choose background color or image</p>
+                      <p class="top__color-text hide">Choose text color</p>
+                      <p class="top__color-bg hide">Choose background color or image</p>
+                      <span class="top__form-title hide">Sign in</span>
                       <span class="modal-close">&#215;</span>
                     </div>
-                    <ul class="top__color-list">
-                      <li class="top__color-item top__color--active">
+                    <ul class="top__color-list hide">
+                      <li class="top__color-item top__color--active" data-tab="0">
                         <span class="top__color-tab">Colors</span>
                       </li>
-                      <li class="top__color-item">
+                      <li class="top__color-item" data-tab="1">
                         <span class="top__color-tab">Images</span>
                       </li>
-                      <li class="top__color-item">
+                      <li class="top__color-item" data-tab="2">
                         <span class="top__color-tab">Files</span>
                       </li>
                     </ul>
-                    <ul class="top__color-picker hide">
+                    <ul class="top__color-picker hide tab">
                       <li class="top__color-cub top__color-1"></li>
                       <li class="top__color-cub top__color-2"></li>
                       <li class="top__color-cub top__color-3"></li>
@@ -56,9 +57,10 @@
                       <li class="top__color-cub top__color-20"></li>
                       <li class="top__color-cub top__color-21"></li>
                     </ul>
-                    <ul class="top__images hide">
+                    <ul class="top__images hide tab">
                       <li class="top__image">
-                        <img src="images/bg-images/bg-1.jpg" alt="image-bg">
+                        <!-- <img src="images/bg-images/bg-1.jpg" alt="image-bg"> -->
+                        <div></div>
                       </li>
                       <li class="top__image">
                         <img src="images/bg-images/bg-2.jpg" alt="image-bg">
@@ -85,8 +87,7 @@
                         <img src="images/bg-images/bg-9.jpg" alt="image-bg">
                       </li>
                     </ul>
-
-                    <div class="top__group">
+                    <div class="top__group hide tab">
                       <input type="file" class="top__ghost">
                       <div class="top__file">
                         <input type="text" class="top__control" placeholder="Choose a file...">
@@ -95,82 +96,74 @@
                         </span>
                       </div>
                     </div>
+                    <div class="top__form-box hide">
+                      <form class="top__form">
+                        <div class="top__form-content">
+                          <input class="top__form-input" id="login" placeholder="Login here..." type="text" required>
+                          <input class="top__form-input" id="password" placeholder="Password here..." type="password" required>
+                          <span class="top__form-required">Value is empty</span>
+                          <span class="top__form-required">Please check your login or password</span>
+                          <button type="submit" class="top__form-button">Sign in</button>
+                        </div>
+                      </form>
+                    </div>
                   </div>
                 </div>
-                <button class="top__code btn" type="button">
-                  <img src="./images/code.png" alt="">
-                </button>
 
-                <form class="top__text">
-                  <button class="top__style btn" type="button">
-                    <img src="./images/bold.png" alt="bold">
+                <div class="top__menu">
+                  <button class="top__code btn" type="button">
+                    <img src="./images/code.png" alt="">
                   </button>
-                  <button class="top__style btn" type="button">
-                    <img src="./images/italic.png" alt="italic">
-                  </button>
-                  <button class="top__style btn" type="button">
-                    <img src="./images/underline.png" alt="underline">
-                  </button>
-                  <button class="top__style btn" type="button">
-                    <img src="./images/strikethrough.png" alt="strikethrough">
-                  </button>
-                </form>
-                
-                <form class="top__text">
-                  <button class="top__align btn">
-                    <img src="./images/left-text.png" alt="left-text">
-                  </button>
-                  <button class="top__align btn">
-                    <img src="./images/center-text.png" alt="center-text">
-                  </button>
-                  <button class="top__align btn">
-                    <img src="./images/right-text.png" alt="right-text">
-                  </button>
-                </form>
-                
-                <form class="top__text">
-                  <button class="top__font btn">
-                    <img src="./images/font.png" alt="font">
-                    <div class="top__font-wrapper">
-                      <ul class="top__font-list">
-                        <li class="top__font-item">LibreBodoni</li>
-                        <li class="top__font-item">DancingScript</li>
-                        <li class="top__font-item">WorkSans</li>
-                        <li class="top__font-item">Orbitron</li>
-                        <li class="top__font-item">LibreBodoni</li>
-                        <li class="top__font-item">Oswald</li>
-                      </ul>
-                    </div>
-                  </button>
+
+                  <form class="top__text">
+                    <button class="top__style btn" type="button" name="bold"></button>
+                    <button class="top__style btn" type="button" name="italic"></button>
+                    <button class="top__style btn" type="button" name="underline"></button>
+                    <button class="top__style btn" type="button" name="strikethrough"></button>
+                  </form>
                   
-                  <button class="top__font btn">
-                    <img src="./images/font-size.png" alt="font-size">
-                    <div class="top__size">
-                      <ul class="top__size-list">
-                        <li class="top__size-item">12px</li>
-                        <li class="top__size-item">14px</li>
-                        <li class="top__size-item">16px</li>
-                        <li class="top__size-item">18px</li>
-                        <li class="top__size-item">20px</li>
-                        <li class="top__size-item">22px</li>
-                        <li class="top__size-item">25px</li>
-                        <li class="top__size-item">30px</li>
-                      </ul>
-                    </div>
-                  </button>
+                  <form class="top__text">
+                    <button class="top__align btn" type="button" name="left"></button>
+                    <button class="top__align btn" type="button" name="center"></button>
+                    <button class="top__align btn" type="button" name="right"></button>
+                  </form>
+                  
+                  <form class="top__text">
+                    <button class="top__font btn" type="button" name="font">
+                      <div class="top__font-wrapper hide">
+                        <ul class="top__font-list">
+                          <li class="top__font-item" data-name="DancingScript">DancingScript</li>
+                          <li class="top__font-item" data-name="WorkSans">WorkSans</li>
+                          <li class="top__font-item" data-name="Orbitron">Orbitron</li>
+                          <li class="top__font-item" data-name="LibreBodoni">LibreBodoni</li>
+                          <li class="top__font-item" data-name="Oswald">Oswald</li>
+                        </ul>
+                      </div>
+                    </button>
+                    
+                    <button class="top__font btn" type="button" name="font-size">
+                      <div class="top__size hide">
+                        <ul class="top__size-list">
+                          <li class="top__size-item" data-name="12">12px</li>
+                          <li class="top__size-item" data-name="14">14px</li>
+                          <li class="top__size-item" data-name="16">16px</li>
+                          <li class="top__size-item" data-name="18">18px</li>
+                          <li class="top__size-item" data-name="20">20px</li>
+                          <li class="top__size-item" data-name="22">22px</li>
+                          <li class="top__size-item" data-name="25">25px</li>
+                          <li class="top__size-item" data-name="30">30px</li>
+                        </ul>
+                      </div>
+                    </button>
 
-                  <button class="top__font btn">
-                    <img src="./images/palette.png" alt="palette">
+                    <button class="top__font btn" type="button" name="palette"></button>
+                    <button class="top__font btn" type="button" name="image"></button>
+                  </form>
+                  
+                  <button class="top__code btn" type="button">
+                    <img src="./images/padlock.png" alt="padlock">
                   </button>
-
-                  <button class="top__font btn">
-                    <img src="./images/image.png" alt="image">
-                  </button>
-                </form>
-                
-                <button class="top__code btn" type="button">
-                  <img src="./images/padlock.png" alt="padlock">
-                </button>
+                </div>
                 
               </div>
             </div>

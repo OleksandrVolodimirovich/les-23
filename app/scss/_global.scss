@@ -13,20 +13,27 @@ select,
 option{
   cursor: pointer;
 }
+::selection {
+  background: #f35a3a;
+  color: #fff;
+}
 .container{
-    padding: 0 20px;
+    padding: 0 60px;
     margin: 0 auto;
 }
 .block{
   padding: 25px 30px;
-  background: #eaeef1;
 }
 .btn{
   border: 0;
   padding: 0;
   font-size: 0;
   background-color: transparent;
-  padding: 14px 19px;
+  padding: 14px 35px;
+  border: 2px solod transparent;
+  &:hover{
+    border: 2px solid rgb(209, 25, 102);
+  }
 }
 .hide{
   display: none;
@@ -43,3 +50,25 @@ option{
     color: #e94744;
   }
 }
+.red{
+  background: #e84643;
+  &:focus,
+  &:hover{
+    border: 2px solid #0078ff;
+  }
+}
+.green{
+  background: #1d9442;
+  &:focus, 
+  &:hover{
+    border: 2px solid #0078ff;
+  }
+}
+.visible{
+  opacity: 1;
+}
+.hidden{
+  opacity: 0;
+}
+
+    
