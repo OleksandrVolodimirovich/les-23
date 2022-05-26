@@ -20,7 +20,6 @@ const MODAL_CLOSE = document.querySelector('.modal-close');
 const TAB = document.querySelector('.tab');
 const TOP_IMAGES = document.querySelector('.top__images');
 
-
 let isColor = false;
 
 TOP_MENU.addEventListener('click', (event) => {
@@ -67,31 +66,31 @@ TOP_MENU.addEventListener('click', (event) => {
     BOTTOM_INNER.style.textAlign = 'right';
   }
   else if(event.target.name === 'font'){
-    TOP_SIZE.classList.remove('block');
-    TOP_FONT_WRAPPER.classList.add('block');
+    TOP_SIZE.classList.remove('show-block');
+    TOP_FONT_WRAPPER.classList.add('show-block');
   }
   else if(event.target.name === 'font-size'){
-    TOP_FONT_WRAPPER.classList.remove('block');
-    TOP_SIZE.classList.add('block');
+    TOP_FONT_WRAPPER.classList.remove('show-block');
+    TOP_SIZE.classList.add('show-block');
   }
   else if(event.target.name === 'palette'){
-    TOP_COLOR_WRAPPER.classList.add('block');
-    TOP_COLOR_TEXT.classList.add('block');
+    TOP_COLOR_WRAPPER.classList.remove('hide');
+    TOP_COLOR_TEXT.classList.remove('hide');
     TOP_COLOR_PICKER.classList.remove('hide');
     isColor = true;
   }
   else if(event.target.name === 'image'){
     isColor = false;
-    TOP_COLOR_WRAPPER.classList.add('block');
-    TOP_COLOR_BG.classList.add('block');
-    TOP_COLOR_PICKER.classList.remove('hide');
+    TOP_COLOR_WRAPPER.classList.remove('hide');
+    TOP_COLOR_BG.classList.remove('hide');
     TOP_COLOR_LIST.classList.remove('hide');
+    TOP_COLOR_PICKER.classList.remove('hide');
   }
 });
 
 TOP_FONT_WRAPPER.addEventListener('click', (event) => {
   BOTTOM_INNER.style.fontFamily = event.target.dataset.name;
-  TOP_FONT_WRAPPER.classList.remove('block');
+  TOP_FONT_WRAPPER.classList.remove('show-block');
 });
 TOP_FONT_LIST.addEventListener('mouseover', ( event ) => {
   BOTTOM_INNER.style.fontFamily = event.target.dataset.name;
@@ -99,54 +98,52 @@ TOP_FONT_LIST.addEventListener('mouseover', ( event ) => {
 
 TOP_SIZE.addEventListener('click', (event) => {
   BOTTOM_INNER.style.fontSize = event.target.dataset.name + 'px';
-  TOP_SIZE.classList.remove('block');
+  TOP_SIZE.classList.remove('show-block');
 });
 TOP_SIZE.addEventListener('mouseover', ( event ) => {
   BOTTOM_INNER.style.fontSize = event.target.dataset.name + 'px';
 });
 
 MODAL_CLOSE.addEventListener('click', () => {
-  TOP_COLOR_WRAPPER.classList.remove('block');
+  TOP_COLOR_WRAPPER.classList.add('hide');
+  TOP_COLOR_TEXT.classList.add('hide');
+  TOP_COLOR_BG.classList.add('hide');
+  TOP_COLOR_LIST.classList.add('hide');
 });
 
 TOP_COLOR_PICKER.addEventListener('click', (event) => {
   if(isColor){
     BOTTOM_INNER.style.color = getComputedStyle(event.target).backgroundColor;
-    TOP_COLOR_WRAPPER.classList.remove('block');
+    TOP_COLOR_WRAPPER.classList.add('hide');
+    TOP_COLOR_TEXT.classList.add('hide');
   } else {
     BOTTOM.style.backgroundColor = getComputedStyle(event.target).backgroundColor;
-    TOP_COLOR_WRAPPER.classList.remove('block');
+    TOP_COLOR_WRAPPER.classList.add('hide');
+    TOP_COLOR_BG.classList.add('hide');
+    TOP_COLOR_LIST.classList.add('hide');
+    TOP_COLOR_PICKER.classList.add('hide');
   }
   isColor = false;
 });
 
-window.onload = function () {
-  TOP_COLOR_LIST.addEventListener('click', tabs);
-  function tabs(event) {
-    if (event.target.className == 'top__color-item'){
-      //dataTab - номер вкладки, которую нужно отобразить
-      let dataTab = event.target.getAttribute('data-tab');
-      //отключаю класс active
-      let tabH = document.getElementsByClassName('top__color-item');
-      for(let i = 0; i < tabH.length; i++){
-        tabH[i].classList.remove('top__color--active');
-      }
-      event.target.classList.add('top__color--active');
-      //все вкладки с содержимым
-      let tabBody = document.getElementsByClassName('tab');
-      for (let i = 0; i < tabBody.length; i++){
-        if (dataTab == i) {
-          tabBody[i].classList.remove('hide');
-        }else {
-          tabBody[i].classList.add('hide');
-        }
-      }
-    }
+TOP_COLOR_PICKER.addEventListener('mouseover', ( event ) => {
+  if(isColor && event.target && event.target.tagName == 'LI') {
+    BOTTOM_INNER.style.color =  getComputedStyle(event.target).backgroundColor;
+  } 
+  else if(event.target && event.target.tagName == 'LI'){
+    console.log(event.target && event.target.tagName == 'LI');
+    BOTTOM.style.backgroundColor =  getComputedStyle(event.target).backgroundColor;
   }
-};
+});
 
 TOP_IMAGES.addEventListener('click', (event) => {
   console.dir(event.target);
   console.log(event.target.style.url);
   BOTTOM.style.backgroundImage = event.target.srcElement;
 });
+
+function open(){
+  TOP_COLOR_WRAPPER.classList.remove('hide');
+    TOP_COLOR_TEXT.classList.remove('hide');
+    TOP_COLOR_PICKER.classList.remove('hide');
+}

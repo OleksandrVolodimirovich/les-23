@@ -4,7 +4,7 @@
   justify-content: center;
 }
 .top{
-  background: #676968;
+  background-image: radial-gradient( yellow, #f06d06 );
   &__inner{
     display: flex;
     justify-content: center;
@@ -147,7 +147,7 @@
     border-radius: 7px;
   }
   &__color-title{
-    padding: 0 25px;
+    padding: 25px 30px;
     font-size: 24px;
     @extend %roboto-700;
     display: flex;
@@ -219,31 +219,50 @@
     flex-wrap: wrap;
     gap: 10px 36px;
     padding: 30px 40px;
-    &:nth-child(1){
-      background-image: url('../images/bg-images/bg-1.jpg');
+  }
+  &__image{
+    width: 262px;
+    height: 128px;
+    overflow: hidden;
+    cursor: url(../images/cursor.png),pointer;
+    border-radius: 7px;
+    overflow: hidden;
+    & div{
+      height: 100%;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-    }
-  }
-  &__image{
-    max-width: 262px;
-    max-height: 128px;
-    cursor: url(../images/cursor.png),pointer;
-    overflow: hidden;
-    border-radius: 7px;
-    & img{
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-      border-radius: 7px;
       transition: all .3s;
     }
+    &:nth-child(1) div{
+      background-image: url('../images/bg-images/bg-1.jpg');
+    }
+    &:nth-child(2) div{
+      background-image: url('../images/bg-images/bg-2.jpg');
+    }
+    &:nth-child(3) div{
+      background-image: url('../images/bg-images/bg-3.jpg');
+    }
+    &:nth-child(4) div{
+      background-image: url('../images/bg-images/bg-4.jpg');
+    }
+    &:nth-child(5) div{
+      background-image: url('../images/bg-images/bg-5.jpg');
+    }
+    &:nth-child(6) div{
+      background-image: url('../images/bg-images/bg-6.jpg');
+    }
+    &:nth-child(7) div{
+      background-image: url('../images/bg-images/bg-7.jpg');
+    }
+    &:nth-child(8) div{
+      background-image: url('../images/bg-images/bg-8.jpg');
+    }
+    &:nth-child(9) div{
+      background-image: url('../images/bg-images/bg-9.jpg');
+    }
   }
-  &__image:hover{
-    border: 2px solid #2791dd;
-  }
-  &__image:hover img{
+  &__image:hover div{
     transform: scale(1.1);
   }
   &__group{
@@ -280,7 +299,6 @@
     line-height: 1.5;
     text-align: center;
     white-space: nowrap;
-    // vertical-align: middle;
     touch-action: manipulation;
     cursor: url(../images/cursor.png),pointer;
     border: 1px solid transparent;
@@ -476,7 +494,7 @@
 }
 .bottom{
   height: 100%;
-  background: #eaeef1;
+  background-color: #09c6f9;
   &__inner{
     min-height: 100vh;
     font-size: 25px;
