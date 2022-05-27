@@ -28,9 +28,9 @@ option{
   border: 0;
   padding: 0;
   font-size: 0;
-  background-color: transparent;
-  padding: 14px 35px;
-  border: 2px solod transparent;
+  // background-color: transparent;
+  padding: 28px 35px;
+  border: 2px solid transparent;
   &:hover{
     border: 2px solid rgb(209, 25, 102);
   }
@@ -46,6 +46,7 @@ option{
   color: #000;
   padding: 0 10px;
   cursor: url(../images/cursor.png),pointer;
+  margin-left: auto;
   &:hover{
     color: #e94744;
   }

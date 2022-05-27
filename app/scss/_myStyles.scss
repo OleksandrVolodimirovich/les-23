@@ -20,6 +20,17 @@
     border: none;
     margin-right: 20px;
     background-color: #f5f7f6;
+    background: url(../images/code.png) center no-repeat;
+    background-color: #808080;
+  }
+  &__login{
+    border-radius: 7px;
+    border: none;
+    margin-right: 20px;
+    background-image: url(../images/padlock.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f5f7f6;
   }
   &__style{
     &:nth-child(1){

@@ -20,8 +20,12 @@ const TOP_COLOR_ITEM_ACTIVE = document.querySelector('.top__color--active');
 const MODAL_CLOSE = document.querySelector('.modal-close');
 const TAB = document.querySelector('.tab');
 const TOP_IMAGES = document.querySelector('.top__images');
+const SIGN_IN = document.querySelector('.top__form-box');
+const SIGN_IN_BTN = document.querySelector('.top__form-button');
+const TOP__LOGIN = document.querySelector('.top__login');
 
 let isColor = false;
+let isOpen = true;
 
 TOP_MENU.addEventListener('click', (event) => {
   if(event.target.name === 'bold' && BOTTOM_INNER.style.fontWeight === 'bold'){
@@ -87,6 +91,13 @@ TOP_MENU.addEventListener('click', (event) => {
     TOP_COLOR_LIST.classList.remove('hide');
     TOP_COLOR_PICKER.classList.remove('hide');
   }
+  else if(event.target.name === 'padlock'){
+    TOP_COLOR_WRAPPER.classList.remove('hide');
+    SIGN_IN.classList.remove('hide');
+    if(TOP__LOGIN.style.backgroundImage != 'url(../images/padlock.png);'){
+      console.log('open');
+    }
+  }
 });
 
 TOP_FONT_WRAPPER.addEventListener('click', (event) => {
@@ -116,6 +127,7 @@ MODAL_CLOSE.addEventListener('click', () => {
   TOP_COLOR_ITEM.forEach(function(item){
     item.classList.remove('top__color--active');
   });
+  SIGN_IN.classList.add('hide');
 });
 
 TOP_COLOR_PICKER.addEventListener('click', (event) => {
@@ -187,3 +199,27 @@ IMAGE_INPUT.addEventListener('change', function(){
   });
   READER.readAsDataURL(this.files[0]);
 });
+
+
+SIGN_IN_BTN.addEventListener('click', function(event) {
+  event.preventDefault();
+  const LOGIN = document.getElementById('login').value;
+  const PASSWORD = document.getElementById('password').value;
+  const TOP_CODE = document.querySelector('.top__code');
+  if(LOGIN == 'admin' && PASSWORD == 'admin'){
+    TOP_CODE.style.backgroundColor = '#f5f7f6';
+    TOP_COLOR_WRAPPER.classList.add('hide');
+    SIGN_IN.classList.add('hide');
+    TOP__LOGIN.style.backgroundImage = 'url("../images/padlock-unlock.png")';
+  }
+
+});
+
+
+
+
+
+
+
+
+
