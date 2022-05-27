@@ -14,7 +14,8 @@ const TOP_COLOR_TITLE = document.querySelector('.top__color-title');
 const TOP_COLOR_CUB = document.querySelector('.top__color-cub');
 const TOP_COLOR_BG = document.querySelector('.top__color-bg');
 const TOP_COLOR_LIST = document.querySelector('.top__color-list');
-const TOP_COLOR_ITEM = document.querySelector('.top__color-item');
+const TOP_COLOR_ITEM = document.querySelectorAll('.top__color-item');
+const TAB_ITEM = document.querySelectorAll('.tab-item');
 const TOP_COLOR_ITEM_ACTIVE = document.querySelector('.top__color--active');
 const MODAL_CLOSE = document.querySelector('.modal-close');
 const TAB = document.querySelector('.tab');
@@ -108,7 +109,13 @@ MODAL_CLOSE.addEventListener('click', () => {
   TOP_COLOR_WRAPPER.classList.add('hide');
   TOP_COLOR_TEXT.classList.add('hide');
   TOP_COLOR_BG.classList.add('hide');
-  TOP_COLOR_LIST.classList.add('hide');
+  TOP_COLOR_LIST.classList.add('hide'); 
+  TAB_ITEM.forEach(function(item){
+    item.classList.add('hide');
+  });   
+  TOP_COLOR_ITEM.forEach(function(item){
+    item.classList.remove('top__color--active');
+  });
 });
 
 TOP_COLOR_PICKER.addEventListener('click', (event) => {
@@ -136,14 +143,47 @@ TOP_COLOR_PICKER.addEventListener('mouseover', ( event ) => {
   }
 });
 
+TOP_COLOR_ITEM.forEach(function(item) {
+  item.addEventListener('click', function () {
+    let btnActive = item;
+    let dataTab = btnActive.getAttribute('data-tab');
+    let tabActive = document.querySelector(dataTab);
+
+    if(!btnActive.classList.contains('top__color--active')){
+      TOP_COLOR_ITEM.forEach(function(item){
+        item.classList.remove('top__color--active');
+      });
+  
+      TAB_ITEM.forEach(function(item){
+        item.classList.add('hide');
+      });
+  
+      btnActive.classList.add('top__color--active');
+      tabActive.classList.remove('hide');
+    }
+    
+  });
+});
+document.querySelector('.top__color-item').click();
+
 TOP_IMAGES.addEventListener('click', (event) => {
-  console.dir(event.target);
-  console.log(event.target.style.url);
-  BOTTOM.style.backgroundImage = event.target.srcElement;
+  BOTTOM.style.backgroundImage = getComputedStyle(event.target).backgroundImage;
+  TOP_COLOR_WRAPPER.classList.add('hide');
+  TOP_IMAGES.classList.add('hide');
+  TOP_COLOR_LIST.classList.add('hide');
+  TOP_COLOR_PICKER.classList.add('hide');
+  document.querySelector('.top__color-item').click();
 });
 
-function open(){
-  TOP_COLOR_WRAPPER.classList.remove('hide');
-    TOP_COLOR_TEXT.classList.remove('hide');
-    TOP_COLOR_PICKER.classList.remove('hide');
-}
+//input file
+const IMAGE_INPUT = document.querySelector('.image__input');
+let imageUpload = '';
+
+IMAGE_INPUT.addEventListener('change', function(){
+  const READER = new FileReader();
+  READER.addEventListener('load', () => {
+    imageUpload = READER.result;
+    BOTTOM.style.backgroundImage = `url(${imageUpload})`;
+  });
+  READER.readAsDataURL(this.files[0]);
+});

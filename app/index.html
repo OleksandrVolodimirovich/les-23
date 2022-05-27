@@ -24,17 +24,17 @@
                       <span class="modal-close">&#215;</span>
                     </div>
                     <ul class="top__color-list hide">
-                      <li class="top__color-item top__color--active" data-tab="0">
+                      <li class="top__color-item top__color--active" data-tab="#tab1">
                         <span class="top__color-tab">Colors</span>
                       </li>
-                      <li class="top__color-item" data-tab="1">
+                      <li class="top__color-item" data-tab="#tab2">
                         <span class="top__color-tab">Images</span>
                       </li>
-                      <li class="top__color-item" data-tab="2">
+                      <li class="top__color-item" data-tab="#tab3">
                         <span class="top__color-tab">Files</span>
                       </li>
                     </ul>
-                    <ul class="top__color-picker hide tab">
+                    <ul class="top__color-picker tab-item hide" id="tab1">
                       <li class="top__color-cub top__color-1"></li>
                       <li class="top__color-cub top__color-2"></li>
                       <li class="top__color-cub top__color-3"></li>
@@ -57,7 +57,7 @@
                       <li class="top__color-cub top__color-20"></li>
                       <li class="top__color-cub top__color-21"></li>
                     </ul>
-                    <ul class="top__images hide tab">
+                    <ul class="top__images tab-item hide" id="tab2">
                       <li class="top__image"><div></div></li>
                       <li class="top__image"><div></div></li>
                       <li class="top__image"><div></div></li>
@@ -68,14 +68,24 @@
                       <li class="top__image"><div></div></li>
                       <li class="top__image"><div></div></li>
                     </ul>
-                    <div class="top__group hide tab">
-                      <input type="file" class="top__ghost">
-                      <div class="top__file">
-                        <input type="text" class="top__control" placeholder="Choose a file...">
-                        <span class="top__input">
+                    <div class="top__group tab-item hide" id="tab3">
+                      
+                      <!-- <label class="top__file"">
+                        <input class="image__input" type="file" accept="image/png, image/jpg">
+                      
+                          <input type="text" class="top__control" placeholder="Choose a file...">
+                          <span class="top__input">
+                            <button class="top__choose" type="button">Browse</button>
+                          </span>
+                        </label> -->
+
+                        <label class="top__file" placeholder="Choose a file...">
+                          <!-- <input type="text" class="top__control" placeholder="Choose a file..."> -->
+                          <input class="image__input" type="file" accept="image/png, image/jpg">
                           <button class="top__choose" type="button">Browse</button>
-                        </span>
-                      </div>
+                        </label>
+                      
+                      
                     </div>
                     <div class="top__form-box hide">
                       <form class="top__form">
@@ -161,6 +171,8 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel eligendi debitis fugiat nobis cupiditate eveniet.</p>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel eligendi debitis fugiat nobis cupiditate eveniet.</p>
               </div>
+
+              <!-- <input class="image__input" type="file" accept="image/png, image/jpg"> -->
 
             </div>
           </div>
